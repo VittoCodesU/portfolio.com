@@ -1,3 +1,9 @@
+# Victor T. Martinez - AI Developer Portfolio
+
+
+![Captura de pantalla 2025-08-25 180759](https://github.com/user-attachments/assets/59bc469d-ca8d-47fa-b7de-31352a8795c4)
+
+
 # Astro Starter Kit: Basics
 
 ```sh
