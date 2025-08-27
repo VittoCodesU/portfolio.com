@@ -9,62 +9,58 @@ import ProjectsIcon from '../components/icons/projects_icon.astro';
 import Projects from '../components/projects.astro';
 ---
 
-<Layout title="Portfolio Victor T. Martinez - AI & Automation Developer"
-        description = "Hire Victor T. Martinez to build AI and automation solutions that enhance business processes and deliver real value.">
+<Layout
+  title="Portfolio Victor T. Martinez - AI & Automation Developer"
+  description="Hire Victor T. Martinez to build AI and automation solutions that enhance business processes and deliver real value."
+>
   <main>
-    <section class="w-full mx-auto lg:w-[740px] py-44 text-left">
-      <h1 class="text-white text-5xl font-bold mb-4 flex flex-row items-center gap-x-4">
-        Hey, I'm Victor T. Martinez <a 
-        href="https://www.linkedin.com/in/victor-t-martinez-2179ba322/" 
-        target="_blank" 
-        rel="noopener"
-        >
-        <div class = "relative translate-y-[-10px] transition-transform duration-200 ease-in-out hover:scale-110"><Badge>Available for hire</Badge></a></div>
+    <!-- HERO -->
+    <section class="w-full mx-auto max-w-[740px] py-16 sm:py-20 md:py-28 text-left">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 flex items-center gap-3">
+        Hey, I'm Victor T. Martinez
+        <a href="https://www.linkedin.com/in/victor-t-martinez-2179ba322/" target="_blank" rel="noopener">
+          <div class="relative -translate-y-1 transition-transform duration-200 ease-in-out hover:scale-110">
+            <Badge>Available for hire</Badge>
+          </div>
+        </a>
       </h1>
-      
-      <h2 class="text-white text-2xl opacity-80 mt-[45px]">
-        <span>A </span><span class = "text-blue-200 opacity-200">Full Stack Developer,</span><span class = "text-yellow-200"> AI focused</span>, with hands-on experience building solutions that improve processes and deliver real business value.
+
+      <h2 class="text-white/90 text-lg sm:text-xl md:text-2xl mt-4">
+        <span>A </span><span class="text-blue-200">Full Stack Developer,</span>
+        <span class="text-yellow-200"> AI focused</span>, with hands-on experience building solutions that improve processes and deliver real business value.
       </h2>
 
-      <ul>
-        <li class="w-2 h-2 relative mt-6 mb-[60px]">
-            <a href="https://www.linkedin.com/in/victor-t-martinez-2179ba322/"
-                rel="noopener noreferrer"
-                target="_blank"
-                >
-                <LinkedInIcon class="hover:scale-110 hover:text-blue-500" />
-                
-
-            </a> 
-        </li> 
-        
-
+      <ul class="mt-6 mb-10">
+        <li>
+          <a href="https://www.linkedin.com/in/victor-t-martinez-2179ba322/" target="_blank" rel="noopener noreferrer">
+            <LinkedInIcon class="hover:scale-110 hover:text-blue-500 transition-transform inline-block" />
+          </a>
+        </li>
       </ul>
-    </section> 
-    <section class = "w-full mx-auto lg:w-[740px] text-left "><!--ZONA DE WORK EXPERIENCE -->
-      <h2 class = "w-full mx-auto lg:w-[740px] text-left py-20 text-3xl text-blue-200 font-bold flex items-center gap-3">
-        <Work class = "size-12 mb-2 opacity-40"></Work>
-        <span>Work experience:</span>
-        <div id = "experience"></div>
-          <nav>
-            <a href="#experience">
-            <Arrowbottom class="transition-transform duration-200 ease-in-out hover:scale-110 ml-[350px] w-16 h-16" />
-            </a>
-          </nav>
-          </h2>
-
-           
-          <Experience />  <!--AQUI LLAMO A mi componente de experiencia -->
-          
     </section>
-    <section class= "w-full mx-auto lg:w-[740px] py-28 text-left">
-      <h2 class = " mb-[150px] text-3xl font-bold text-yellow-200 flex items-center gap-3">
-        <ProjectsIcon class="size-10 mb-2 opacity-40"></ProjectsIcon>
-        <span>Latest projects:</span>
-        <div id = "projects"></div>
-      </h2>
-      <Projects/>
 
+    <!-- EXPERIENCE -->
+    <section id="experience" class="w-full mx-auto max-w-[740px] text-left">
+      <h2 class="py-10 text-2xl sm:text-3xl font-bold text-blue-200 flex items-center justify-between">
+        <span class="flex items-center gap-3">
+          <Work class="w-8 h-8 opacity-40" />
+          <span>Work experience:</span>
+        </span>
+        <a href="#experience">
+          <Arrowbottom class="w-10 h-10 transition-transform duration-200 ease-in-out hover:scale-110" />
+        </a>
+      </h2>
+
+      <Experience />
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="w-full mx-auto max-w-[740px] py-16 sm:py-20 text-left">
+      <h2 class="mb-8 text-2xl sm:text-3xl font-bold text-yellow-200 flex items-center gap-3">
+        <ProjectsIcon class="w-8 h-8 opacity-40" />
+        <span>Latest projects:</span>
+      </h2>
+      <Projects />
     </section>
   </main>
 </Layout>
