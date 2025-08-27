@@ -7,6 +7,8 @@ import Arrowbottom from '../components/Arrowbottom.astro';
 import Work from '../components/icons/work.astro';
 import ProjectsIcon from '../components/icons/projects_icon.astro';
 import Projects from '../components/projects.astro';
+import Stackicon from '../components/icons/stackicon.astro';
+import TechStack from '../components/TechStack.astro';
 ---
 
 <Layout
@@ -43,7 +45,7 @@ import Projects from '../components/projects.astro';
     <section id="experience" class="w-full mx-auto max-w-[740px] text-left">
       <h2 class="py-10 text-2xl sm:text-3xl font-bold text-blue-200 flex items-center justify-between">
         <span class="flex items-center gap-3">
-          <Work class="w-8 h-8 opacity-40" />
+          <Work class="size-10 opacity-40" />
           <span>Work experience:</span>
         </span>
         <a href="#experience">
@@ -61,6 +63,15 @@ import Projects from '../components/projects.astro';
         <span>Latest projects:</span>
       </h2>
       <Projects />
+    </section>
+
+    <!-- STACK -->
+    <section id="projects" class="w-full mx-auto max-w-[740px] py-16 sm:py-20 text-left">
+      <h2 class="mb-8 text-2xl sm:text-3xl font-bold text-blue-200 flex items-center gap-3">
+        <Stackicon class="w-8 h-8 opacity-40" />
+        <span>Stack:</span>
+      </h2>
+      <TechStack />
     </section>
   </main>
 </Layout>

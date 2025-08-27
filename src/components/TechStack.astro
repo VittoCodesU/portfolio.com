@@ -1,0 +1,54 @@
+---
+interface Item {
+  name: string;
+  src: string;
+  url?: string;
+}
+
+const STACK: Item[] = [
+    { name: 'Python',     src: '/stack/python-sv.svg',     url: 'https://www.python.org' },
+    { name: 'LangChain',  src: '/stack/Langchain.svg',  url: 'https://www.langchain.com' },
+  { name: 'FastAPI',      src: '/stack/FastAPI.svg',      url: 'https://astro.build' },
+  { name: 'GIT',   src: '/stack/icons8-git.svg',url: 'https://tailwindcss.com' },
+  { name: 'GitHub',    src: '/stack/github.svg',     url: 'https://github.org' },
+  { name: 'Streamlit',  src: '/stack/Streamlit.svg',  url: 'https://streamlit.io' },
+  { name: 'JavaScript',        src: '/stack/javascript-sv.svg',        url: 'https://git-scm.com' },
+  { name: 'Astro',      src: '/stack/icons8-astro-js.svg',      url: 'https://react.dev' },
+  { name: 'Tailwind CSS',       src: '/stack/icons8-tailwind-css.svg',       url: 'https://tailwindcss.com' },
+  
+];
+---
+
+<section id="stack" class="w-full mx-auto  py-8">
+  <div class="mx-auto max-w-[740px]">
+
+    <!-- Siempre 3 columnas → 3x3 -->
+    <ul role="list" class="grid grid-cols-3 gap-6">
+      {STACK.map(({ name, src, url }) => (
+        <li class="group">
+          <a
+            href={url ?? '#'}
+            target={url ? '_blank' : undefined}
+            rel={url ? 'noopener' : undefined}
+            class="block w-full aspect-square rounded-xl border border-white/10 bg-white/5
+                   hover:bg-white/10 transition"
+            aria-label={name}
+            title={name}
+          >
+            <div class="h-full w-full flex flex-col items-center justify-center gap-2">
+              <!-- Logo a color; solo zoom al hover -->
+              <img
+                src={src}
+                alt={name}
+                class="h-20 w-auto object-contain transition-transform duration-200 group-hover:scale-110"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="text-sm text-white/90">{name}</span>
+            </div>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
